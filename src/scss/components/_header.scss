@@ -1,0 +1,132 @@
+.header {
+  padding-top: 62px;
+  padding-bottom: 42px;
+
+  &__container {
+    display: flex;
+    align-items: center ;
+  }
+
+  &--gray {
+    background-color: #f5f5f5;
+  }
+}
+
+.logo {
+  font-family: "Eurostile", sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  text-shadow: 0px 16px 39px rgba(138, 138, 138, 0.41);
+  color: rgba(#000, 0.63);
+}
+
+.nav {
+  margin-left: auto;
+
+
+  @include small-tablet {
+    position: fixed;
+    left: 0;
+    top: 169px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white-color);
+    transition: opacity .3s, visibility .3s;
+  }
+
+  &__list {
+    display: flex;
+
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 20%;
+      height: 100%;
+    }
+  }
+
+  &__item {
+    & + & {
+      margin-left: 16px;
+
+      @include small-tablet {
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    color: rgba(#000, 0.9);
+
+    @include small-tablet {
+      font-size: 26px;
+      line-height: 140%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0px;
+      width: 100%;
+      height: 1px;
+      background-color: currentColor;
+      transform: scalex(0);
+      transform-origin: right;
+      transition: transform .4s;
+    }
+
+    &:hover {
+      &::before {
+        transform: scalex(1);
+        transform-origin: left;
+        transition: transform .4s;
+      }
+    }
+
+    &--active {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0px;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+        transform: scalex(1);
+        transform-origin: left;
+        transition: transform .4s;
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+  z-index: 15;
+  margin-left: auto;
+
+  @include small-tablet {
+    display: block;
+    @include burger
+  }
+}
+
+.menu--active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s, visibility .3s;
+}

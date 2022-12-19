@@ -1,0 +1,38 @@
+.trend {
+
+  &__title {
+    margin: 0;
+    margin-bottom: 80px;
+    max-width: 685px;
+    font-family: "Eurostile", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 163.5%;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 60px;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author {
+    margin-bottom: 16px;
+    font-family: "Eurostile", sans-serif;
+    font-size: 10px;
+    line-height: 163.5%;
+    letter-spacing: -0.04em;
+  }
+
+  &__song {
+    font-family: "Eurostile", sans-serif;
+    font-size: 26px;
+    line-height: 163.5%;
+    letter-spacing: -0.035em;
+  }
+}

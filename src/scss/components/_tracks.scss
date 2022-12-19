@@ -1,0 +1,51 @@
+.tracks {
+  padding-top: 42px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 150px;
+    row-gap: 100px;
+    margin-bottom: 80px;
+
+    @include small-tablet  {
+      column-gap: 30px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 60px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author {
+    font-family: "Eurostile", sans-serif;
+    font-size: 10px;
+    line-height: 163.5%;
+    letter-spacing: -0.04em;
+  }
+
+  &__name {
+    font-family: "Eurostile", sans-serif;
+    font-size: 26px;
+    line-height: 163.5%;
+    letter-spacing: -0.035em;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      max-width: 60%;
+    }
+
+    @media (max-width: 436px) {
+      max-width: 100%;
+    }
+  }
+}

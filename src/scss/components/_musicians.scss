@@ -1,0 +1,112 @@
+.musicians {
+  position: relative;
+  padding-top: 94px;
+  padding-bottom: 111px;
+
+  @include small-tablet {
+    padding-top: 80px;
+  }
+
+  @include mobile {
+    padding-top: 60px;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+    color: var(--black-color);
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    margin-bottom: 216px;
+    font-size: 26px;
+    line-height: 140%;
+
+    @include small-tablet {
+      margin-bottom: 60px;
+    }
+
+    @include mini-mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 60px;
+    }
+  }
+
+  &__item {
+    &:nth-child(2) {
+      padding-top: 320px;
+
+      @include small-tablet {
+        padding-top: 0;
+      }
+    }
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    margin-bottom: 46px;
+    height: 420px;
+
+    picture {
+      display: flex;
+      width: fit-content;
+      height: 100%;
+      clip-path: polygon(21% 0%, 100% -120%, 66% 100%, 4% 100%);
+
+      img {
+        border: 1px solid #F7F7F7;
+        box-shadow: 0px 16px 39px rgba(138, 138, 138, 0.41);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mobile {
+      align-items: initial;
+    }
+  }
+
+  &__caption {
+    font-family: "Eurostile";
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 140%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+  }
+}

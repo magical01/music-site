@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" class="page page-lyrics">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+
+    <header class="header header--gray">
+      <div class="container header__container">
+        <a class="logo" href="#">Toklyrics</a>
+        <nav class="nav" title="Main menu" data-menu>
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--active" href="#">Submit Lyrics</a></li>
+            <li class="nav__item"><a class="nav__link" href="submit-youtube.html">Submit for YouTube</a></li>
+          </ul>
+        </nav>
+        <button class="burger" aria-label="Open menu" aria-expanded="false"  data-burger>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+     @include('partials/submit.html')
+     @include('partials/banner.html')
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <a class="footer__link" href="#">Toklyrics.com</a>
+        <nav class="footer__nav">
+          <span class="footer__text">Site Map</span>
+          <ul class="footer__list list-reset">
+            <li class="footer__item"><a class="footer__item-link" href="index.html">Home</a></li>
+            <li class="footer__item"><a class="footer__item-link footer__item-link--active" href="">Submit Lyrics</a></li>
+            <li class="footer__item"><a class="footer__item-link" href="submit-youtube.html">Submit for Youtube</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+.playback {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(#fff, 0.25);
+
+  &-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.pause {
+  .playback-icon {
+    background-image: url('../img/pause.svg');
+  }
+}
+
+.play {
+  .playback-icon {
+    transform: translateX(2px);
+    background-image: url('../img/start.svg');
+  }
+}
+
+.musicians {
+  .playback {
+   background-color: rgba(#000, 0.47);
+
+  }
+}

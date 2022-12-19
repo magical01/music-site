@@ -1,0 +1,100 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__container {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: "Eurostile", sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    @include mobile {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+    margin-right: 233px;
+
+    @include mobile {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+  }
+
+  &__item {
+    & + & {
+      margin-top: 6px;
+    }
+  }
+
+  &__item-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    transition: .3s color;
+
+    &:hover {
+      color: rgba(254, 0, 79, 0.84);
+      transition: .3s color;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+    }
+
+    &--active {
+      background: linear-gradient(95.75deg, rgba(0, 247, 239, 0.74) -9.61%, rgba(254, 0, 79, 0.84) 98.93%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(95.75deg, rgba(0, 247, 239, 0.74) -9.61%, rgba(254, 0, 79, 0.84) 98.93%);
+      }
+    }
+  }
+}

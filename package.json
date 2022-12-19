@@ -3,6 +3,7 @@
   "version": "2.0.4",
   "description": "gulp-builder for weblayout",
   "main": "gulpfile.js",
+  "homepage": "https://magical01.github.io/music-site",
   "scripts": {
     "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
     "dev": "gulp",
@@ -10,7 +11,9 @@
     "cache": "gulp cache",
     "backend": "gulp backend",
     "zip": "gulp zip",
-    "code": "editorconfig-checker"
+    "code": "editorconfig-checker",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d app"
   },
   "author": "magical",
   "license": "ISC",
