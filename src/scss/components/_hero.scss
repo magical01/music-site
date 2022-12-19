@@ -1,6 +1,7 @@
 .hero {
   padding-bottom: 30px;
 
+
   @include small-tablet {
     padding-bottom: 15px;
   }
@@ -18,10 +19,10 @@
     align-items: center;
     width: 100%;
     height: 567px;
-    background-image: url('../img/hero-bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-image: url('../img/hero-bg.png');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
 
     @include small-tablet {
       height: 500px;
@@ -51,6 +52,7 @@
       top: 0;
       right: 0;
       bottom: 0;
+      z-index: 3  ;
       background-color: rgba(0, 0, 0, 0.35);
       backdrop-filter: blur(3px);
     }
@@ -65,8 +67,6 @@
     line-height: 59px;
     letter-spacing: -0.02em;
     color: var(--white-color);
-
-
 
     @include small-tablet {
       font-size: 34px;
@@ -149,5 +149,28 @@
       outline-offset: 4px;
     }
   }
+}
 
+.video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  background-image: url('../img/hero-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__media {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+  }
 }

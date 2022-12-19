@@ -135,6 +135,7 @@ a {
 }
 
 .top-banner {
+  margin-bottom: 62px;
   padding: 14px 0;
   width: 100%;
   font-size: 14px;
@@ -195,6 +196,7 @@ a {
 .main-btn {
   position: relative;
   box-shadow: 0px 0px 37px rgba(194, 194, 194, 0.24);
+  border: 2px solid rgba(254, 0, 79, 0.84);
   border-radius: 20px 0 20px 0;
   padding: 16px 25px;
   font-weight: 600;
@@ -202,19 +204,31 @@ a {
   line-height: 140%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--white-color);
-  background: linear-gradient(95.75deg, rgba(0, 247, 239, 0.74) -9.61%, rgba(254, 0, 79, 0.84) 98.93%);
-  transition: background-color .3s;
+  color: rgba(254, 0, 79, 0.84);
+  // background: linear-gradient(95.75deg, rgba(0, 247, 239, 0.74) -9.61%, rgba(254, 0, 79, 0.84) 98.93%);
+  background-color: transparent;
+  transition: background-color .3s, color .3s;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    border: 1px solid var(--black-color);
-    border-radius: 20px 0 20px 0;
-    margin: -4px;
-    width: calc(100% + 8px);
-    height: calc(100% + 8px);
+  &:hover {
+    color: var(--white-color);
+    background-color: rgba(254, 0, 79, 0.84);
+    transition: background-color .3s, color .3s;
   }
+
+  // animation: .3s anim-bg linear infinite;
+
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   border: 1px solid var(--black-color);
+  //   border-radius: 20px 0 20px 0;
+  //   margin: -4px;
+  //   width: calc(100% + 8px);
+  //   height: calc(100% + 8px);
+  // }
+
 }
+
